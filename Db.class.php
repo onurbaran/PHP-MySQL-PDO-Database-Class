@@ -216,6 +216,14 @@ class DB
 			$this->Init($query,$params);
 			return $this->sQuery->fetchColumn();
 		}
+        /**
+         *      Returns last insert id 
+         * 
+         *      @return type int
+         */
+                public function getLastInsertId() {
+                    return $this->pdo->lastInsertId();
+                }
        /**	
 	* Writes the log and returns the exception
 	*
